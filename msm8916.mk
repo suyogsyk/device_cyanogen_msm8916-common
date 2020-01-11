@@ -95,9 +95,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
-# Exclude AudioFX
-TARGET_EXCLUDES_AUDIOFX := true
-
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
@@ -147,11 +144,6 @@ endif
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-legacymm \
-    vendor.lineage.livedisplay@2.0-service-sysfs
 
 # Media
 PRODUCT_PACKAGES += \
@@ -224,10 +216,6 @@ $(call inherit-product, device/cyanogen/msm8916-common/system_prop_msm8939.mk)
 else ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8916)
 $(call inherit-product, device/cyanogen/msm8916-common/system_prop_msm8916.mk)
 endif
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
